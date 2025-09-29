@@ -35,7 +35,7 @@ Focus on user experience + clean code
 
 1️⃣ Clone the Repo
 
-git clone https://github.com/your-username/movie-recommender.git
+
 cd movie-recommender
 
 
