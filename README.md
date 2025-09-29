@@ -34,7 +34,7 @@ Focus on user experience + clean code
 ⚙️ How to Run Locally
 
 1️⃣ Clone the Repo
-
+https://github.com/sanskarhere/PopcornPicks.git
 
 cd movie-recommender
 
