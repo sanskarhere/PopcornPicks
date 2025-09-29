@@ -20,6 +20,11 @@ Web Framework	Streamlit
 Data Handling	Dataset preprocessing, vectorization
 Deployment Ready	Modular code structure
 
+Demo 
+
+<img width="1182" height="746" alt="image" src="https://github.com/user-attachments/assets/cc43facd-9e1b-45e5-803f-f03cc9bca734" />
+
+
 🎯 Why I Built This
 
 To demonstrate how AI/ML algorithms can solve everyday problems like “What should I watch next?”
