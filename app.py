@@ -2,24 +2,29 @@ import pickle
 import streamlit as st
 import requests
 
-# ✅ TMDb V3 API Key
 API_KEY = "eeeac149744c594e234a7535ca59a404"
 
-# Function to fetch poster
+import time
+
 def fetch_poster(movie_id):
     url = f"https://api.themoviedb.org/3/movie/{movie_id}?api_key={API_KEY}&language=en-US"
-    try:
-        data = requests.get(url, timeout=10).json()
-        poster_path = data.get('poster_path')
-        if poster_path:
-            return "https://image.tmdb.org/t/p/w500/" + poster_path
-        else:
-            return "https://via.placeholder.com/500x750?text=No+Image"
-    except Exception as e:
-        print(f"⚠️ Error fetching poster for movie ID {movie_id}: {e}")
-        return "https://via.placeholder.com/500x750?text=Error"
+    retries = 3
+    for _ in range(retries):
+        try:
+            data = requests.get(url, timeout=3).json()
+            poster_path = data.get('poster_path')
+            if poster_path:
+                return "https://image.tmdb.org/t/p/w500/" + poster_path
+            else:
+                return "https://via.placeholder.com/500x750?text=No+Image"
+        except Exception as e:
+            print(f"⚠️ Error fetching poster for {movie_id}: {e}")
+            time.sleep(1)
+  
+    return "https://via.placeholder.com/500x750?text=Error"
 
-# Function to recommend movies
+
+
 def recommender(movie):
     index = movies[movies['title'] == movie].index[0]
     distances = sorted(list(enumerate(similarity[index])), reverse=True, key=lambda x: x[1])
@@ -59,7 +64,7 @@ if st.button("Show Recommendation"):
         with col:
             if idx < len(recommended_movies_name):
                 st.text(recommended_movies_name[idx])
-                st.image(recommended_movies_posters[idx], use_container_width=True)
+                st.image(recommended_movies_posters[idx], width="stretch")
             else:
                 st.text("N/A")
                 st.image("https://via.placeholder.com/500x750?text=No+Image", use_container_width=True)
