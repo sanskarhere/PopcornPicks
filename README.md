@@ -24,7 +24,7 @@ Demo
 
 <img width="1886" height="804" alt="image" src="https://github.com/user-attachments/assets/5d6b0e62-d30e-4431-a70d-dda3cd82020d" />
 
-
+Tutorial - https://www.linkedin.com/posts/sanskar-gupta-76382a2a5_ai-machinelearning-python-activity-7379436858377650177-EMC4?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEmgmbsBNxBXOM9OKGkqyEZFNkc8CFGbsuA
 
 🎯 Why I Built This
 
