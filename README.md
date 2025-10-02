@@ -22,7 +22,8 @@ Deployment Ready	Modular code structure
 
 Demo 
 
-<img width="1182" height="746" alt="image" src="https://github.com/user-attachments/assets/cc43facd-9e1b-45e5-803f-f03cc9bca734" />
+<img width="1886" height="804" alt="image" src="https://github.com/user-attachments/assets/5d6b0e62-d30e-4431-a70d-dda3cd82020d" />
+
 
 
 🎯 Why I Built This
